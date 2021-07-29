@@ -19,5 +19,26 @@ if (age >= 18) {
     const yearsLeft = 18 - age;
     console.log(`Sarah is too young. Wait another ${yearsLeft} years`);
 } // if there is no else block, JS will move on tot he next line and log nothing. 
+// this is called a 'CONTROLLED STRUCTURE' 
 
+// Another example
 
+const birthYear = 1998;
+
+if (birthYear <= 2000) {
+    let century = 20; // the variable inside this block will not be defined outside of the block
+} else {
+    let century = 21;
+}
+console.log(century); // this will give in error because century is not defined globally
+
+// Now let us define 'century' globally...
+
+const birthYear = 1998;
+let century;
+if (birthYear <= 2000) /* Insert the condition inside the parenthesis */ {
+    century = 20; // the variable inside this block will not be defined outside of the block
+} else {
+    century = 21;
+}
+console.log(century); // this will log '20' because 'century' is now defined globally

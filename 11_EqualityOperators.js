@@ -60,4 +60,10 @@ if (favourite === 23) {
 }
 // You can keep adding 'else if' block as much as you want.
 
+// There's also a DIFFERENT OPERATOR 
 
+if (favourite !== 23) console.log('Why not 23?');
+// this means if the input is NOT 23, then this will log 'Why not 23?'
+
+// !== this is the strict version
+// != this is the loose version

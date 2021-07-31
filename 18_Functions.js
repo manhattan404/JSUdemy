@@ -29,6 +29,14 @@ function fruitProcessor(apples, oranges); /* these two parameters will be define
 // now let us invoke this function
 fruitProcessor(5, 0); // the parameters is the input for the function. These are called the ARGUMENTS
 // this will log '5, 0' because of the console.log line inside the function in line 25
-// If you want to use the 'juice' value that was returned, we need to store in in a variable. 
+// If you want to use the 'juice' value that was returned, we need to store in in a variable. We need to 'capture' it.
 const appleJuice = fruitProcessor(5, 0);
 console.log(appleJuice); // this will log 'Juice with 5 apples and 0 oranges.'
+// We can also log it directly to the console
+console.log(fruitProcessor(5, 0)); // this will log the same string. We did not capture the value in a variable. 
+
+// We can now use this function with different arguments
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+// As you can see, console.log() is a built in function and so is Number()

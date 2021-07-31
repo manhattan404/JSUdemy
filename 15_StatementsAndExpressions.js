@@ -13,3 +13,15 @@ true && false && !false // this is also an expression because in the end, this w
 // EXPRESSIONS are like the words that make up the sentence.
 
 // We write our programs as sequence of actions and these actions are statements. 
+
+if (23 > 10) {
+    const str = '23 is bigger'; // this string is a statement because it doesn't really produce a value.
+}
+
+// In TEMPLATE LITERALS, you can only insert expressions and not statements.
+console.log(`I'm ${2037 - 1991} years old.`)
+
+// If we have a variable...
+const me = 'Jonas';
+console.log(`I'm ${2037 - 1991} years old ${me}.`) // this will also be an exxpression. 
+

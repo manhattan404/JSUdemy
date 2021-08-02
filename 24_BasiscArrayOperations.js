@@ -20,5 +20,24 @@ console.log(friends); // Jay will be gone here.
 console.log(popped);  // this will not return the length of the new array but it will return the removed element.
 
 // Remove the first element
-friends.unshift();
+friends.shift();
 console.log(friends);
+
+// Tells which position a certain element is in the array
+console.log(friends.indexOf('Steven')); // this will log '1'
+// We try to get an element that is not in the array, it will log '-1'.
+
+// ES6 Method. 'INCLUDE' tells if the element is in the array or not. It will log 'true' or 'false'. 
+console.log(friends.includes('Steven')); // this will log 'true'
+console.log(friends.includes('Bob')); // this will log 'false' 
+
+// This method is a strict equality which means if you add a number and check for a string, it will return 'false'
+friends.push(23); // this is a number
+console.log(friend.includes('23')); // this will return false because you're checking for a string.  
+console.log(friends.includes(23)); // this will return 'true'.
+
+// we can use 'includes' method for conditionals.
+if (friends.includes('Peter')) {
+    console.log('You have a friend called Peter');
+}
+

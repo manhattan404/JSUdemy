@@ -31,5 +31,45 @@ for (let i = 0; i < jonas.length; i++) {
 };
 // this will log an array of the type of the keys in the object.
 
+// Another way of doing this...
+for (let i = 0; i < jonas.length; i++) {
+    // Reading from jonas array
+    console.log(jonas[i], typeof jonas[i]);
+
+    // this will append it
+    typres.push(typeof jonas[i]);
+}
+
+// Let's try another practical example.
+
+const years = [1991, 2007, 1969, 2020];
+// let's calculate the ages for this birth years and store them in a new array.
+const ages = [];
+
+for (let i = 0; i < years.length; i++); {
+    ages.push(2037 - years[i]); // we will push this value to the empty array above. 
+}
+console.log(ages); // this will log the calculated ages in the array. 
+
+// CONTINUE and BREAK STATEMENT
+
+// CONTINUE : to exist the current itiration fo the loop and continue to the next one.
+// BREAK : used to completely terminate the whole loop. 
 
 
+// What if we only want to log the elements that are strings? We can use the CONTINUE statement
+console.log('--- ONLY STRINGS ---');
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] !== 'string') continue; // "If the type of current element is not a string, then continue"
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+
+// BREAK 
+// What if we don't want to log any other elements after we found a number?
+console.log('--- BREAK WITH NUMBER ---');
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break;
+
+    console.log(jonas[i], typeof jonas[i]);
+}

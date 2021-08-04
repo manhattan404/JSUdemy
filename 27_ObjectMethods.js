@@ -43,3 +43,52 @@ const jonas = {
 };
 
 console.log(jonas.calcAge());
+
+// But why do we need this? Because if we change the name of the object to 'jonas2' then we would have to change all the instances of 'jonas' in the code and that will take a lot of time. If we use the 'this' method, we only have to change one. 
+
+// But what if you have to access the age multiple times? Calculating it multiple times will not be efficient. 
+
+const jonas = {
+    firstName: 'John',
+    lastName: 'Doe',
+    birthYear: 1991,
+    job: 'teacher'
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear; // we essentially created a this.age and assigned an expression to it 
+        return this.age; // we return the value to the function.
+    }
+};
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+// Now, the calculation is only done one time and it is just accessing the value that is assigned to the key.
+
+// Coding Challenge: 
+// "Jonas is a 46-year old teacher, and he has a driver's license."
+
+const jonas = {
+    firstName: 'John',
+    lastName: 'Doe',
+    birthYear: 1991,
+    job: 'teacher'
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license`
+    }
+};
+
+console.log(jonas.getSummary());
+
+
+
